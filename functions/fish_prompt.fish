@@ -9,6 +9,7 @@ source (functions --details _tide_pwd)
 
 set -l prompt_var _tide_prompt_$fish_pid
 set -U $prompt_var # Set var here so if we erase $prompt_var, bg job won't set a uvar
+set -e _tide_repaint # Clear any repaint flag triggered by the set -U above
 
 set_color normal | read -l color_normal
 status fish-path | read -l fish_path
